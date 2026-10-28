@@ -1,0 +1,57 @@
+{
+  "doc": "docs/31_第二轮外部验证分析计划.md",
+  "round": 2,
+  "sha256": "8c3b684f529133abd5573c01fdeea079e5f89ae8fd116f5277105aaac51dec66",
+  "created_at": "2026-09-29",
+  "analyses": [
+    {
+      "id": "A1",
+      "name": "same_sign erratum recompute",
+      "script": 50,
+      "criterion": "protocol-definition same-sign >= 10/15 -> partial transfer of path-combination layer holds; never revise the 15-path list"
+    },
+    {
+      "id": "A2",
+      "name": "APACHE IV benchmark",
+      "script": 49,
+      "criterion": "descriptive only, no pass gate; missingness reported as-is"
+    },
+    {
+      "id": "A3",
+      "name": "measurement-density strata attribution",
+      "script": 52,
+      "criterion": "pre-specified hypothesis (attenuation of lost paths & +87lab anti-transfer in well-measured strata S1/S3); report as-is whether confirmed or refuted"
+    },
+    {
+      "id": "A4",
+      "name": "XGBoost zero-shot",
+      "script": 53,
+      "criterion": "descriptive; report AUPRC difference vs linear numeric arm"
+    },
+    {
+      "id": "A5",
+      "name": "eICU native path mining",
+      "script": 51,
+      "criterion": "H1 full-overlap >= 5 / H2 unordered-overlap >= 8 (and full < 5) / H3 otherwise; never a basis for rewriting MIMIC list"
+    },
+    {
+      "id": "A6",
+      "name": "concept budget curve",
+      "script": 54,
+      "criterion": "descriptive; ranking by MIMIC train |logit| only; retention table, bootstrap CI on eICU side (B=1000, seed=42)"
+    },
+    {
+      "id": "A7",
+      "name": "SAPS II rebuild feasibility",
+      "script": null,
+      "criterion": "feasibility memo only; not implemented this round"
+    }
+  ],
+  "frozen_assets_untouched": [
+    "15 paths SHA 966ca9be",
+    "84-node dictionary graph_final_7var_motif84",
+    "lab_thresholds.json",
+    "freeze_sha256.txt",
+    "train/val/holdout split"
+  ]
+}

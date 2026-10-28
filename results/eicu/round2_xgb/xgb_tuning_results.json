@@ -1,0 +1,206 @@
+{
+  "round": "round-2",
+  "post_hoc": true,
+  "n_estimators_max": 3000,
+  "early_stopping_rounds": 50,
+  "fixed_params": {
+    "objective": "binary:logistic",
+    "eval_metric": "aucpr",
+    "tree_method": "hist",
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "reg_lambda": 1.0,
+    "min_child_weight": 1.0,
+    "n_jobs": -1,
+    "random_state": 42
+  },
+  "cv": "StratifiedGroupKFold(k=5, groups=SUBJECT_ID, seed=42)",
+  "selection_metric": "mean fold validation AUPRC (early-stopped)",
+  "configs": [
+    {
+      "max_depth": 3,
+      "learning_rate": 0.01,
+      "fold_auprc": [
+        0.5222497085792659,
+        0.5991473583148815,
+        0.5084545542524876,
+        0.48300802059434067,
+        0.5062274766208311
+      ],
+      "mean_auprc": 0.5238174236723614,
+      "fold_best_iterations": [
+        426,
+        536,
+        635,
+        334,
+        689
+      ],
+      "mean_best_iter": 524.0
+    },
+    {
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "fold_auprc": [
+        0.5217788852982683,
+        0.6035226474888461,
+        0.5165654813120569,
+        0.48395806270756603,
+        0.5110275697419027
+      ],
+      "mean_auprc": 0.5273705293097279,
+      "fold_best_iterations": [
+        103,
+        143,
+        219,
+        61,
+        208
+      ],
+      "mean_best_iter": 146.8
+    },
+    {
+      "max_depth": 3,
+      "learning_rate": 0.1,
+      "fold_auprc": [
+        0.5288655171561614,
+        0.6045615484775073,
+        0.5059099204372705,
+        0.4834770777851914,
+        0.5036044087026994
+      ],
+      "mean_auprc": 0.525283694511766,
+      "fold_best_iterations": [
+        35,
+        87,
+        146,
+        60,
+        83
+      ],
+      "mean_best_iter": 82.2
+    },
+    {
+      "max_depth": 5,
+      "learning_rate": 0.01,
+      "fold_auprc": [
+        0.5069753835616695,
+        0.5919448847726005,
+        0.5146568007071705,
+        0.5021958604211328,
+        0.49951045673980626
+      ],
+      "mean_auprc": 0.5230566772404759,
+      "fold_best_iterations": [
+        373,
+        320,
+        494,
+        67,
+        377
+      ],
+      "mean_best_iter": 326.2
+    },
+    {
+      "max_depth": 5,
+      "learning_rate": 0.05,
+      "fold_auprc": [
+        0.5077514818799334,
+        0.5941381537285227,
+        0.5058008166844321,
+        0.5103431637635123,
+        0.5094794027420885
+      ],
+      "mean_auprc": 0.5255026037596977,
+      "fold_best_iterations": [
+        81,
+        119,
+        113,
+        29,
+        70
+      ],
+      "mean_best_iter": 82.4
+    },
+    {
+      "max_depth": 5,
+      "learning_rate": 0.1,
+      "fold_auprc": [
+        0.4791694323029449,
+        0.6057373850718165,
+        0.49484156361426673,
+        0.5001935829518023,
+        0.4986506502896475
+      ],
+      "mean_auprc": 0.5157185228460955,
+      "fold_best_iterations": [
+        135,
+        62,
+        132,
+        26,
+        109
+      ],
+      "mean_best_iter": 92.8
+    },
+    {
+      "max_depth": 7,
+      "learning_rate": 0.01,
+      "fold_auprc": [
+        0.5052250363736958,
+        0.5641179785315865,
+        0.5073255913925219,
+        0.5105944684819494,
+        0.4795365045798854
+      ],
+      "mean_auprc": 0.5133599158719278,
+      "fold_best_iterations": [
+        402,
+        49,
+        449,
+        126,
+        103
+      ],
+      "mean_best_iter": 225.8
+    },
+    {
+      "max_depth": 7,
+      "learning_rate": 0.05,
+      "fold_auprc": [
+        0.4984035202482585,
+        0.6057595734542255,
+        0.5203189372960195,
+        0.5095891496349646,
+        0.48980012058766265
+      ],
+      "mean_auprc": 0.5247742602442262,
+      "fold_best_iterations": [
+        102,
+        80,
+        129,
+        53,
+        225
+      ],
+      "mean_best_iter": 117.8
+    },
+    {
+      "max_depth": 7,
+      "learning_rate": 0.1,
+      "fold_auprc": [
+        0.4916474274739357,
+        0.5728106794546304,
+        0.48216940667805963,
+        0.5051864804650191,
+        0.4770323731464856
+      ],
+      "mean_auprc": 0.5057692734436261,
+      "fold_best_iterations": [
+        39,
+        38,
+        76,
+        29,
+        155
+      ],
+      "mean_best_iter": 67.4
+    }
+  ],
+  "best": {
+    "max_depth": 3,
+    "learning_rate": 0.05,
+    "n_estimators_final": 147
+  }
+}

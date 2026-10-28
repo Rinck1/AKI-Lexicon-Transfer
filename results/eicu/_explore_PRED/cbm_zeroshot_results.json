@@ -1,0 +1,110 @@
+{
+  "post_hoc": true,
+  "fit": "mimic train split only, one full-train logistic (C=1, lbfgs)",
+  "seed": 42,
+  "arms": {
+    "static": {
+      "mimic_val(desc)": {
+        "n": 2537,
+        "prevalence": 0.145447378793851,
+        "auprc": 0.22185520372044581,
+        "auroc": 0.64730022300223,
+        "brier": 0.12104326800139684
+      },
+      "eicu_zeroshot": {
+        "n": 21657,
+        "prevalence": 0.15251419864247126,
+        "auprc": 0.18950368920008434,
+        "auroc": 0.5724165337721352,
+        "brier": 0.12990032203169538
+      }
+    },
+    "static+15paths": {
+      "mimic_val(desc)": {
+        "n": 2537,
+        "prevalence": 0.145447378793851,
+        "auprc": 0.22530813813876616,
+        "auroc": 0.656490314903149,
+        "brier": 0.12058598674512053
+      },
+      "eicu_zeroshot": {
+        "n": 21657,
+        "prevalence": 0.15251419864247126,
+        "auprc": 0.19118486518884764,
+        "auroc": 0.5739147045568086,
+        "brier": 0.12967956501014663
+      }
+    },
+    "static+84a": {
+      "mimic_val(desc)": {
+        "n": 2537,
+        "prevalence": 0.145447378793851,
+        "auprc": 0.33295668322047917,
+        "auroc": 0.7606951069510695,
+        "brier": 0.11138529711236386
+      },
+      "eicu_zeroshot": {
+        "n": 21657,
+        "prevalence": 0.15251419864247126,
+        "auprc": 0.28141657708608503,
+        "auroc": 0.6921264480951222,
+        "brier": 0.12230152437865177
+      }
+    },
+    "static+84ind": {
+      "mimic_val(desc)": {
+        "n": 2537,
+        "prevalence": 0.145447378793851,
+        "auprc": 0.32771214046811614,
+        "auroc": 0.7600063500635007,
+        "brier": 0.11155108172544367
+      },
+      "eicu_zeroshot": {
+        "n": 21657,
+        "prevalence": 0.15251419864247126,
+        "auprc": 0.26890051219311784,
+        "auroc": 0.6828990165524249,
+        "brier": 0.1238048698104549
+      }
+    },
+    "static+87lab": {
+      "mimic_val(desc)": {
+        "n": 2537,
+        "prevalence": 0.145447378793851,
+        "auprc": 0.44942404503905714,
+        "auroc": 0.8147731477314774,
+        "brier": 0.10161816017014406
+      },
+      "eicu_zeroshot": {
+        "n": 21657,
+        "prevalence": 0.15251419864247126,
+        "auprc": 0.1701063401646951,
+        "auroc": 0.5406257254847158,
+        "brier": 0.14213367012850378
+      }
+    },
+    "cbm_full": {
+      "mimic_val(desc)": {
+        "n": 2537,
+        "prevalence": 0.145447378793851,
+        "auprc": 0.4703404309788888,
+        "auroc": 0.8261570115701158,
+        "brier": 0.0994648923873643
+      },
+      "eicu_zeroshot": {
+        "n": 21657,
+        "prevalence": 0.15251419864247126,
+        "auprc": 0.2124752699166319,
+        "auroc": 0.6103087293455111,
+        "brier": 0.13452677697997015
+      }
+    }
+  },
+  "coverage": {
+    "eicu_unseen_motif_concepts": [],
+    "eicu_unseen_lab_concepts": [],
+    "n_motif_concepts": 84,
+    "n_lab_concepts": 87,
+    "n_paths": 15
+  }
+}

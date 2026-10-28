@@ -1,0 +1,9 @@
+{
+  "stage": "45_eicu_frozen_atoms",
+  "freeze_sha256": "966ca9be40f9c7abdca6f95416434bcd9abda4d82e50523f4a3e70d5471458b7",
+  "n_motif": 432915,
+  "n_lab": 225118,
+  "n_atoms": 658033,
+  "n_stays": 21657,
+  "refit_thresholds": false
+}

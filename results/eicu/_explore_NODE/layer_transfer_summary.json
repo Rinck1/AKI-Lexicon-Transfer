@@ -1,0 +1,80 @@
+{
+ "post_hoc_note": "All eICU analyses are post-hoc exploratory; MIMIC side uses train only.",
+ "cohorts": {
+  "mimic_train": {
+   "n": 7610,
+   "mortality": 0.145203679369251
+  },
+  "eicu": {
+   "n": 21657,
+   "mortality": 0.15251419864247126
+  }
+ },
+ "L1_alphabet_distribution_reference": {
+  "jsd_train_vs_eicu": 0.133,
+  "jsd_within_mimic": 0.0155,
+  "spearman_train_vs_eicu": 0.888,
+  "spearman_within_mimic": 0.9986,
+  "source": "outputs/tables/eicu_motif_consistency.csv + motif_consistency.json"
+ },
+ "L2_node_outcome_assoc": {
+  "n_nodes": 84,
+  "sign_agreement": 62,
+  "sign_agreement_rate": 0.7380952380952381,
+  "spearman_diff_rho": 0.8201073200364484,
+  "spearman_diff_p": 1.4024455118874e-21,
+  "mimic_sig52_same_sign": 45,
+  "mimic_sig52_same_and_eicu_sig": 41,
+  "mimic_sig52_same_and_eicu_sig_support20": 41,
+  "mimic_bonf34_same_sign": 32,
+  "mimic_bonf34_same_and_eicu_sig": 30,
+  "mimic_bonf34_same_and_eicu_sig_support20": 30,
+  "eicu_sig_total": 60,
+  "eicu_support_total": 84
+ },
+ "L2_lab_atom_assoc": {
+  "n_lab_atoms": 87,
+  "sign_agreement": 54,
+  "sign_agreement_rate": 0.6206896551724138,
+  "spearman_diff_rho": 0.09615805205219799,
+  "mimic_sig_count": 71,
+  "mimic_sig_same_and_eicu_sig": 4,
+  "eicu_sig_total": 6
+ },
+ "L2b_adjusted_signs": {
+  "adjusted_sign_agreement_mimic_vs_eicu": 60,
+  "adjusted_sign_agreement_rate": 0.7142857142857143,
+  "eicu_adjusted_same_as_mimic_crude": 62,
+  "mimic_adj_vs_mimic_crude_same": 80
+ },
+ "L3_zero_shot_prediction": {
+  "cohort": "eICU full (n=21657, zero-shot, MIMIC-train-frozen)",
+  "static": {
+   "auprc": 0.18950368920008434,
+   "auroc": 0.5724165337721352,
+   "brier": 0.12990032203169538
+  },
+  "static+84nodes": {
+   "auprc": 0.26890051219311784,
+   "auroc": 0.6828990165524249,
+   "brier": 0.12380486981051052
+  },
+  "static+87labs": {
+   "auprc": 0.1701063401646951,
+   "auroc": 0.5406257254847158,
+   "brier": 0.14213367012850298
+  },
+  "static+84+87": {
+   "auprc": 0.20787634321207488,
+   "auroc": 0.6067379218228145,
+   "brier": 0.13622711512295563
+  }
+ },
+ "L4_paths_reference": {
+  "same_sign_paths": "9/15 (<10 gate)",
+  "auprc_static": 0.1895,
+  "auprc_static_plus_paths": 0.1876,
+  "auroc_static": 0.5724,
+  "source": "data/external/eicu/path_external_reproduce.json"
+ }
+}

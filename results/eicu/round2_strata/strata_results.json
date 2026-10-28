@@ -1,0 +1,662 @@
+{
+  "round": "round-2 (pre-specified docs/31 A3)",
+  "zero_refit": true,
+  "strata_n": {
+    "full": {
+      "n": 21657,
+      "mortality": 0.15251419864247126
+    },
+    "S1_gcs_ge2": {
+      "n": 14432,
+      "mortality": 0.1522311529933481
+    },
+    "S1_gcs_ge1_sens": {
+      "n": 15316,
+      "mortality": 0.1497127187255158
+    },
+    "S2_urine_ge12": {
+      "n": 12539,
+      "mortality": 0.15703006619347634
+    },
+    "S3_gcs2_and_urine12": {
+      "n": 9782,
+      "mortality": 0.15640973216111226
+    }
+  },
+  "arms_by_stratum": {
+    "full": {
+      "static": {
+        "n": 21657,
+        "mortality": 0.15251419864247126,
+        "auprc": 0.18950368920008434,
+        "auroc": 0.5724165337721352
+      },
+      "static+84a": {
+        "n": 21657,
+        "mortality": 0.15251419864247126,
+        "auprc": 0.28141657708608503,
+        "auroc": 0.6921264480951222
+      },
+      "static+87lab": {
+        "n": 21657,
+        "mortality": 0.15251419864247126,
+        "auprc": 0.1701063401646951,
+        "auroc": 0.5406257254847158
+      }
+    },
+    "S1_gcs_ge2": {
+      "static": {
+        "n": 14432,
+        "mortality": 0.1522311529933481,
+        "auprc": 0.18647029741772175,
+        "auroc": 0.5709322944558458
+      },
+      "static+84a": {
+        "n": 14432,
+        "mortality": 0.1522311529933481,
+        "auprc": 0.2778019818998335,
+        "auroc": 0.6857405024758843
+      },
+      "static+87lab": {
+        "n": 14432,
+        "mortality": 0.1522311529933481,
+        "auprc": 0.17389474650446973,
+        "auroc": 0.5464318006926635
+      }
+    },
+    "S1_gcs_ge1_sens": {
+      "static": {
+        "n": 15316,
+        "mortality": 0.1497127187255158,
+        "auprc": 0.18327816795113075,
+        "auroc": 0.5696288819616299
+      },
+      "static+84a": {
+        "n": 15316,
+        "mortality": 0.1497127187255158,
+        "auprc": 0.27716148683228514,
+        "auroc": 0.68913726022453
+      },
+      "static+87lab": {
+        "n": 15316,
+        "mortality": 0.1497127187255158,
+        "auprc": 0.1687088218935204,
+        "auroc": 0.5409932422220957
+      }
+    },
+    "S2_urine_ge12": {
+      "static": {
+        "n": 12539,
+        "mortality": 0.15703006619347634,
+        "auprc": 0.18927666850090152,
+        "auroc": 0.5699168473688434
+      },
+      "static+84a": {
+        "n": 12539,
+        "mortality": 0.15703006619347634,
+        "auprc": 0.29044859518090166,
+        "auroc": 0.6936874919819165
+      },
+      "static+87lab": {
+        "n": 12539,
+        "mortality": 0.15703006619347634,
+        "auprc": 0.17268632877865492,
+        "auroc": 0.5365459321469532
+      }
+    },
+    "S3_gcs2_and_urine12": {
+      "static": {
+        "n": 9782,
+        "mortality": 0.15640973216111226,
+        "auprc": 0.19110157884461498,
+        "auroc": 0.5711834168147789
+      },
+      "static+84a": {
+        "n": 9782,
+        "mortality": 0.15640973216111226,
+        "auprc": 0.28806175318873833,
+        "auroc": 0.6914574086218751
+      },
+      "static+87lab": {
+        "n": 9782,
+        "mortality": 0.15640973216111226,
+        "auprc": 0.17584154119725576,
+        "auroc": 0.5424876203510973
+      }
+    }
+  },
+  "paths_by_stratum": {
+    "full": {
+      "n_same": 11,
+      "n_support_ok": 15,
+      "detail": [
+        {
+          "j": 1,
+          "n": 410,
+          "diff": 0.0409,
+          "same": true
+        },
+        {
+          "j": 2,
+          "n": 78,
+          "diff": 0.0785,
+          "same": true
+        },
+        {
+          "j": 3,
+          "n": 333,
+          "diff": -0.0024,
+          "same": false
+        },
+        {
+          "j": 4,
+          "n": 107,
+          "diff": 0.0252,
+          "same": true
+        },
+        {
+          "j": 5,
+          "n": 164,
+          "diff": -0.0062,
+          "same": false
+        },
+        {
+          "j": 6,
+          "n": 220,
+          "diff": 0.0158,
+          "same": true
+        },
+        {
+          "j": 7,
+          "n": 85,
+          "diff": -0.0114,
+          "same": false
+        },
+        {
+          "j": 8,
+          "n": 184,
+          "diff": -0.0661,
+          "same": true
+        },
+        {
+          "j": 9,
+          "n": 149,
+          "diff": 0.0154,
+          "same": true
+        },
+        {
+          "j": 10,
+          "n": 88,
+          "diff": -0.0162,
+          "same": true
+        },
+        {
+          "j": 11,
+          "n": 323,
+          "diff": -0.0417,
+          "same": true
+        },
+        {
+          "j": 12,
+          "n": 120,
+          "diff": 0.031,
+          "same": true
+        },
+        {
+          "j": 13,
+          "n": 192,
+          "diff": 0.0195,
+          "same": true
+        },
+        {
+          "j": 14,
+          "n": 69,
+          "diff": 0.036,
+          "same": false
+        },
+        {
+          "j": 15,
+          "n": 225,
+          "diff": 0.048,
+          "same": true
+        }
+      ]
+    },
+    "S1_gcs_ge2": {
+      "n_same": 12,
+      "n_support_ok": 15,
+      "detail": [
+        {
+          "j": 1,
+          "n": 345,
+          "diff": 0.043,
+          "same": true
+        },
+        {
+          "j": 2,
+          "n": 51,
+          "diff": 0.044,
+          "same": true
+        },
+        {
+          "j": 3,
+          "n": 260,
+          "diff": -0.0023,
+          "same": false
+        },
+        {
+          "j": 4,
+          "n": 65,
+          "diff": -0.0138,
+          "same": false
+        },
+        {
+          "j": 5,
+          "n": 135,
+          "diff": 0.0034,
+          "same": true
+        },
+        {
+          "j": 6,
+          "n": 144,
+          "diff": 0.0006,
+          "same": true
+        },
+        {
+          "j": 7,
+          "n": 61,
+          "diff": -0.0212,
+          "same": false
+        },
+        {
+          "j": 8,
+          "n": 149,
+          "diff": -0.086,
+          "same": true
+        },
+        {
+          "j": 9,
+          "n": 107,
+          "diff": 0.0161,
+          "same": true
+        },
+        {
+          "j": 10,
+          "n": 71,
+          "diff": -0.0256,
+          "same": true
+        },
+        {
+          "j": 11,
+          "n": 279,
+          "diff": -0.0529,
+          "same": true
+        },
+        {
+          "j": 12,
+          "n": 103,
+          "diff": 0.052,
+          "same": true
+        },
+        {
+          "j": 13,
+          "n": 115,
+          "diff": 0.0043,
+          "same": true
+        },
+        {
+          "j": 14,
+          "n": 56,
+          "diff": -0.0094,
+          "same": true
+        },
+        {
+          "j": 15,
+          "n": 163,
+          "diff": 0.026,
+          "same": true
+        }
+      ]
+    },
+    "S1_gcs_ge1_sens": {
+      "n_same": 12,
+      "n_support_ok": 15,
+      "detail": [
+        {
+          "j": 1,
+          "n": 354,
+          "diff": 0.0463,
+          "same": true
+        },
+        {
+          "j": 2,
+          "n": 52,
+          "diff": 0.0427,
+          "same": true
+        },
+        {
+          "j": 3,
+          "n": 272,
+          "diff": -0.0027,
+          "same": false
+        },
+        {
+          "j": 4,
+          "n": 69,
+          "diff": -0.0194,
+          "same": false
+        },
+        {
+          "j": 5,
+          "n": 140,
+          "diff": 0.0003,
+          "same": true
+        },
+        {
+          "j": 6,
+          "n": 157,
+          "diff": 0.0032,
+          "same": true
+        },
+        {
+          "j": 7,
+          "n": 63,
+          "diff": -0.0228,
+          "same": false
+        },
+        {
+          "j": 8,
+          "n": 156,
+          "diff": -0.08,
+          "same": true
+        },
+        {
+          "j": 9,
+          "n": 112,
+          "diff": 0.0111,
+          "same": true
+        },
+        {
+          "j": 10,
+          "n": 73,
+          "diff": -0.0266,
+          "same": true
+        },
+        {
+          "j": 11,
+          "n": 283,
+          "diff": -0.0445,
+          "same": true
+        },
+        {
+          "j": 12,
+          "n": 105,
+          "diff": 0.0506,
+          "same": true
+        },
+        {
+          "j": 13,
+          "n": 129,
+          "diff": 0.0054,
+          "same": true
+        },
+        {
+          "j": 14,
+          "n": 60,
+          "diff": -0.0164,
+          "same": true
+        },
+        {
+          "j": 15,
+          "n": 169,
+          "diff": 0.0281,
+          "same": true
+        }
+      ]
+    },
+    "S2_urine_ge12": {
+      "n_same": 11,
+      "n_support_ok": 15,
+      "detail": [
+        {
+          "j": 1,
+          "n": 407,
+          "diff": 0.0383,
+          "same": true
+        },
+        {
+          "j": 2,
+          "n": 41,
+          "diff": -0.0107,
+          "same": false
+        },
+        {
+          "j": 3,
+          "n": 179,
+          "diff": -0.0063,
+          "same": false
+        },
+        {
+          "j": 4,
+          "n": 64,
+          "diff": -0.0008,
+          "same": false
+        },
+        {
+          "j": 5,
+          "n": 95,
+          "diff": 0.0009,
+          "same": true
+        },
+        {
+          "j": 6,
+          "n": 128,
+          "diff": 0.0308,
+          "same": true
+        },
+        {
+          "j": 7,
+          "n": 47,
+          "diff": -0.0081,
+          "same": false
+        },
+        {
+          "j": 8,
+          "n": 184,
+          "diff": -0.0711,
+          "same": true
+        },
+        {
+          "j": 9,
+          "n": 95,
+          "diff": 0.0221,
+          "same": true
+        },
+        {
+          "j": 10,
+          "n": 88,
+          "diff": -0.0208,
+          "same": true
+        },
+        {
+          "j": 11,
+          "n": 323,
+          "diff": -0.0468,
+          "same": true
+        },
+        {
+          "j": 12,
+          "n": 78,
+          "diff": 0.0484,
+          "same": true
+        },
+        {
+          "j": 13,
+          "n": 95,
+          "diff": 0.0433,
+          "same": true
+        },
+        {
+          "j": 14,
+          "n": 42,
+          "diff": -0.0142,
+          "same": true
+        },
+        {
+          "j": 15,
+          "n": 110,
+          "diff": 0.0434,
+          "same": true
+        }
+      ]
+    },
+    "S3_gcs2_and_urine12": {
+      "n_same": 14,
+      "n_support_ok": 15,
+      "detail": [
+        {
+          "j": 1,
+          "n": 345,
+          "diff": 0.0392,
+          "same": true
+        },
+        {
+          "j": 2,
+          "n": 36,
+          "diff": 0.0103,
+          "same": true
+        },
+        {
+          "j": 3,
+          "n": 142,
+          "diff": 0.0056,
+          "same": true
+        },
+        {
+          "j": 4,
+          "n": 50,
+          "diff": 0.0036,
+          "same": true
+        },
+        {
+          "j": 5,
+          "n": 85,
+          "diff": -0.0154,
+          "same": false
+        },
+        {
+          "j": 6,
+          "n": 100,
+          "diff": 0.0137,
+          "same": true
+        },
+        {
+          "j": 7,
+          "n": 40,
+          "diff": 0.0187,
+          "same": true
+        },
+        {
+          "j": 8,
+          "n": 149,
+          "diff": -0.0907,
+          "same": true
+        },
+        {
+          "j": 9,
+          "n": 74,
+          "diff": 0.033,
+          "same": true
+        },
+        {
+          "j": 10,
+          "n": 71,
+          "diff": -0.0299,
+          "same": true
+        },
+        {
+          "j": 11,
+          "n": 279,
+          "diff": -0.0577,
+          "same": true
+        },
+        {
+          "j": 12,
+          "n": 69,
+          "diff": 0.076,
+          "same": true
+        },
+        {
+          "j": 13,
+          "n": 73,
+          "diff": 0.008,
+          "same": true
+        },
+        {
+          "j": 14,
+          "n": 38,
+          "diff": -0.0249,
+          "same": true
+        },
+        {
+          "j": 15,
+          "n": 94,
+          "diff": 0.0354,
+          "same": true
+        }
+      ]
+    }
+  },
+  "gcs_lactate_by_stratum": {
+    "full": {
+      "gcs_total": {
+        "n_atoms_eval": 7,
+        "n_agree": 1
+      },
+      "lactate": {
+        "n_atoms_eval": 8,
+        "n_agree": 3
+      }
+    },
+    "S1_gcs_ge2": {
+      "gcs_total": {
+        "n_atoms_eval": 7,
+        "n_agree": 2
+      },
+      "lactate": {
+        "n_atoms_eval": 8,
+        "n_agree": 3
+      }
+    },
+    "S1_gcs_ge1_sens": {
+      "gcs_total": {
+        "n_atoms_eval": 7,
+        "n_agree": 1
+      },
+      "lactate": {
+        "n_atoms_eval": 8,
+        "n_agree": 2
+      }
+    },
+    "S2_urine_ge12": {
+      "gcs_total": {
+        "n_atoms_eval": 7,
+        "n_agree": 2
+      },
+      "lactate": {
+        "n_atoms_eval": 8,
+        "n_agree": 3
+      }
+    },
+    "S3_gcs2_and_urine12": {
+      "gcs_total": {
+        "n_atoms_eval": 7,
+        "n_agree": 2
+      },
+      "lactate": {
+        "n_atoms_eval": 8,
+        "n_agree": 3
+      }
+    }
+  }
+}

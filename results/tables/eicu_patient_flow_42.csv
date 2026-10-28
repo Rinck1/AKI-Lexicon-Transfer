@@ -1,0 +1,7 @@
+step,n_stays,n_subjects,note
+00_icu_base,104266,91627,
+01_kdigo_aki_any,28300,26798,stage>=1 creatinine and/or urine
+02_ha_aki_stays,26447,25136,CA_MAX_HOURS=0.0
+03_first_ha_aki_per_subject,25136,25136,earliest HA-AKI onset stay
+04_landmark_eligible_48h,21657,21657,alive & in hospital at t0+48h
+05_urine_complete_subset,12539,12539,n_urine_hours_measured >= 12

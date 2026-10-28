@@ -1,0 +1,79 @@
+{
+  "post_hoc": true,
+  "n_bins": 10,
+  "binning": "deciles of predicted risk",
+  "models": {
+    "static": {
+      "eicu_zeroshot": {
+        "slope": 0.49577193701485406,
+        "intercept": -0.7074748997367566,
+        "brier": 0.12990032203169538,
+        "brier_recalibrated_in_eicu": 0.1281365799099636,
+        "model": "static",
+        "set": "eicu_zeroshot"
+      },
+      "mimic_val(desc)": {
+        "slope": 0.8386528643238963,
+        "intercept": -0.2634729833631947,
+        "brier": 0.12104326800139684,
+        "brier_recalibrated_in_eicu": 0.12067668722837899,
+        "model": "static",
+        "set": "mimic_val(desc)"
+      }
+    },
+    "static+15paths": {
+      "eicu_zeroshot": {
+        "slope": 0.4706169668209411,
+        "intercept": -0.7699382288616491,
+        "brier": 0.12967956501014663,
+        "brier_recalibrated_in_eicu": 0.12810618877879107,
+        "model": "static+15paths",
+        "set": "eicu_zeroshot"
+      },
+      "mimic_val(desc)": {
+        "slope": 0.846390712229154,
+        "intercept": -0.2550613982281541,
+        "brier": 0.12058598674512053,
+        "brier_recalibrated_in_eicu": 0.12020934714273757,
+        "model": "static+15paths",
+        "set": "mimic_val(desc)"
+      }
+    },
+    "static+84a": {
+      "eicu_zeroshot": {
+        "slope": 0.7256645870707928,
+        "intercept": -0.3310728053284475,
+        "brier": 0.12230152437865177,
+        "brier_recalibrated_in_eicu": 0.12125016508580182,
+        "model": "static+84a",
+        "set": "eicu_zeroshot"
+      },
+      "mimic_val(desc)": {
+        "slope": 0.8689085703986102,
+        "intercept": -0.2123790115440465,
+        "brier": 0.11138529711236386,
+        "brier_recalibrated_in_eicu": 0.11081290808400962,
+        "model": "static+84a",
+        "set": "mimic_val(desc)"
+      }
+    },
+    "cbm_full": {
+      "eicu_zeroshot": {
+        "slope": 0.3348708333726302,
+        "intercept": -0.9637219366226144,
+        "brier": 0.13452677697997015,
+        "brier_recalibrated_in_eicu": 0.1267782963267033,
+        "model": "cbm_full",
+        "set": "eicu_zeroshot"
+      },
+      "mimic_val(desc)": {
+        "slope": 0.8886398938095741,
+        "intercept": -0.1674533029366552,
+        "brier": 0.0994648923873643,
+        "brier_recalibrated_in_eicu": 0.09890647483789877,
+        "model": "cbm_full",
+        "set": "mimic_val(desc)"
+      }
+    }
+  }
+}

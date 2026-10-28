@@ -1,0 +1,46 @@
+{
+  "stage": "48_eicu_motif_consistency",
+  "n_nodes": 84,
+  "cohorts": {
+    "MIMIC train": {
+      "label": "MIMIC train",
+      "n_stays": 7599,
+      "n_atoms": 164332,
+      "winner_rate": 21.625477036452164,
+      "low_conf_prop": 0.1153214224861865
+    },
+    "MIMIC val": {
+      "label": "MIMIC val",
+      "n_stays": 2528,
+      "n_atoms": 54713,
+      "winner_rate": 21.642800632911392,
+      "low_conf_prop": 0.11743095790762707
+    },
+    "MIMIC holdout": {
+      "label": "MIMIC holdout",
+      "n_stays": 2533,
+      "n_atoms": 54395,
+      "winner_rate": 21.4745361231741,
+      "low_conf_prop": 0.11646291019395165
+    },
+    "eICU": {
+      "label": "eICU",
+      "n_stays": 21628,
+      "n_atoms": 432915,
+      "winner_rate": 20.01641390789717,
+      "low_conf_prop": 0.1131030340829031
+    }
+  },
+  "jsd_holdout_vs_eicu": 0.13177909616263722,
+  "jsd_train_vs_eicu": 0.13299583309053642,
+  "jsd_train_vs_holdout_within_mimic": 0.01550501294406552,
+  "spearman_holdout_vs_eicu": 0.8917069120878008,
+  "spearman_train_vs_eicu": 0.8883860320545921,
+  "spearman_within_mimic": 0.9985623019368426,
+  "low_conf_mimic_holdout": 0.11646291019395165,
+  "low_conf_eicu": 0.1131030340829031,
+  "low_conf_delta_pp": -0.3359876111048543,
+  "low_conf_ok": true,
+  "alphabet_transfers": true,
+  "verdict": "字母表跨站点迁移（形态频率分布一致）"
+}

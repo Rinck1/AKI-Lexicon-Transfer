@@ -1,0 +1,15 @@
+{
+  "stage": "43_eicu_align_time_grid",
+  "grid_shape": [
+    1039536,
+    78
+  ],
+  "frac_measured": {
+    "heart_rate": 0.798175339766973,
+    "sbp": 0.7609798987240461,
+    "urine_output_ml": 0.30381150821135583,
+    "creatinine": 0.06333114004709793,
+    "lactate": 0.014748887965399948,
+    "gcs_total": 0.1706934632374444
+  }
+}

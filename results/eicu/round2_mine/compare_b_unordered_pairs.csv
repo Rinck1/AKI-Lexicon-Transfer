@@ -1,0 +1,16 @@
+mimic_path,stripped_unordered_pair,in_eicu_top50,in_eicu_stable_pool,in_eicu_any_ge20
+lactate|B1|升高 → urine_output_ml|低位缓升型|B3,lactate|升高 + urine_output_ml|低位缓升型,False,True,True
+mbp|缓降持平型|B3 → lactate|B4|升高,lactate|升高 + mbp|缓降持平型,False,True,True
+wbc|B1|升高 → gcs_total|B4|下降,gcs_total|下降 + wbc|升高,False,True,True
+lactate|B3|升高 → sbp|低位下滑型|B4,lactate|升高 + sbp|低位下滑型,False,True,True
+gcs_total|B3|下降 → creatinine|B4|升高,creatinine|升高 + gcs_total|下降,False,False,True
+creatinine|B3|升高 → ph|B4|下降,creatinine|升高 + ph|下降,False,True,True
+dbp|低位回升型|B1 → lactate|B4|升高,dbp|低位回升型 + lactate|升高,False,True,True
+urine_output_ml|低位波动型|B1 → creatinine|B4|升高,creatinine|升高 + urine_output_ml|低位波动型,False,True,True
+potassium|B3|升高 → lactate|B4|下降,lactate|下降 + potassium|升高,False,False,True
+respiratory_rate|末期骤降型|B1 → urine_output_ml|低位波动型|B4,respiratory_rate|末期骤降型 + urine_output_ml|低位波动型,False,False,True
+urine_output_ml|低位波动型|B1 → urine_output_ml|进行性下降型|B2,urine_output_ml|低位波动型 + urine_output_ml|进行性下降型,False,False,True
+dbp|持续下降型|B1 → gcs_total|B4|下降,dbp|持续下降型 + gcs_total|下降,False,True,True
+hemoglobin|B3|升高 → creatinine|B4|升高,creatinine|升高 + hemoglobin|升高,False,True,True
+ph|B1|升高 → gcs_total|B2|升高,gcs_total|升高 + ph|升高,False,False,True
+ph|B3|升高 → creatinine|B4|升高,creatinine|升高 + ph|升高,False,True,True

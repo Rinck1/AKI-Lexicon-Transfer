@@ -1,0 +1,491 @@
+{
+  "stage": "50_path_sign_erratum",
+  "round": "round2_erratum",
+  "created_at": "2026-09-30T14:13:11",
+  "seed": 42,
+  "n_bootstrap": 1000,
+  "freeze_sha256": "966ca9be40f9c7abdca6f95416434bcd9abda4d82e50523f4a3e70d5471458b7",
+  "official_source": "data/external/eicu/path_external_reproduce.json (untouched)",
+  "definitions": {
+    "impl": "scripts/46 L81-83: same_sign = death_rate_path > death_rate_other (eICU-only)",
+    "protocol": "docs/28 §4.2 L80: same_sign = eICU 与 MIMIC train 的死亡占比差同号",
+    "protocol_adj_reference": "MIMIC train static+15path logistic coef sign (train-only fit)",
+    "protocol_crude_reference": "MIMIC train crude death_rate_diff sign (literal wording)"
+  },
+  "eicu": {
+    "n": 21657,
+    "mortality": 0.15251419864247126,
+    "auprc_static_recomputed": 0.18950368920008434,
+    "auprc_static_paths_recomputed": 0.1876194598798319,
+    "auroc_static_recomputed": 0.5724165337721352,
+    "auroc_static_paths_recomputed": 0.5789181139741375,
+    "auprc_static_official": 0.18950368920008434,
+    "auprc_static_paths_official": 0.1876194598798319
+  },
+  "counts": {
+    "impl_same_sign": 9,
+    "protocol_same_sign_adj": 11,
+    "protocol_same_sign_crude": 11,
+    "gate_min_same_sign": 10
+  },
+  "sign_tests": {
+    "protocol_adj_k": 11,
+    "protocol_adj_p_two_sided": 0.11846923828124999,
+    "protocol_crude_k": 11,
+    "protocol_crude_p_two_sided": 0.11846923828124999,
+    "impl_k": 9,
+    "impl_p_two_sided": 0.6072387695312499
+  },
+  "paths": [
+    {
+      "no": 1,
+      "path": "lactate|B1|升高 → urine_output_ml|低位缓升型|B3",
+      "mimic_train_coef": 0.9887084007145864,
+      "mimic_train_coef_ci": [
+        0.7490571451555841,
+        1.2283596562735888
+      ],
+      "mimic_train_direction": "risk(+)",
+      "mimic_train_crude_diff": 0.2648835400548528,
+      "mimic_train_crude_sign": 1,
+      "mimic_train_support": 425,
+      "eicu_support": 410,
+      "eicu_support_ok": true,
+      "eicu_death_rate_path": 0.1926829268292683,
+      "eicu_death_rate_other": 0.15173906904504164,
+      "eicu_death_rate_diff": 0.040943857784226656,
+      "eicu_or": 1.3404800211053804,
+      "eicu_or_woolf_ci": [
+        1.0464557421755976,
+        1.7171167537835155
+      ],
+      "eicu_or_boot_ci": [
+        1.0328203180522206,
+        1.5525331920124292
+      ],
+      "impl_same_sign": true,
+      "protocol_same_sign_adj": true,
+      "protocol_same_sign_crude": true
+    },
+    {
+      "no": 2,
+      "path": "mbp|缓降持平型|B3 → lactate|B4|升高",
+      "mimic_train_coef": 0.8043494242679334,
+      "mimic_train_coef_ci": [
+        0.13194176674635993,
+        1.4767570817895068
+      ],
+      "mimic_train_direction": "risk(+)",
+      "mimic_train_crude_diff": 0.44646303266992926,
+      "mimic_train_crude_sign": 1,
+      "mimic_train_support": 99,
+      "eicu_support": 78,
+      "eicu_support_ok": true,
+      "eicu_death_rate_path": 0.23076923076923078,
+      "eicu_death_rate_other": 0.15223133602113165,
+      "eicu_death_rate_diff": 0.07853789474809914,
+      "eicu_or": 1.7026893776938739,
+      "eicu_or_woolf_ci": [
+        1.0102159732764073,
+        2.8698329798813313
+      ],
+      "eicu_or_boot_ci": [
+        0.9825181778165005,
+        2.191435843530818
+      ],
+      "impl_same_sign": true,
+      "protocol_same_sign_adj": true,
+      "protocol_same_sign_crude": true
+    },
+    {
+      "no": 3,
+      "path": "wbc|B1|升高 → gcs_total|B4|下降",
+      "mimic_train_coef": 1.1740559142039644,
+      "mimic_train_coef_ci": [
+        0.7959361389280368,
+        1.552175689479892
+      ],
+      "mimic_train_direction": "risk(+)",
+      "mimic_train_crude_diff": 0.28818400587147674,
+      "mimic_train_crude_sign": 1,
+      "mimic_train_support": 152,
+      "eicu_support": 333,
+      "eicu_support_ok": true,
+      "eicu_death_rate_path": 0.15015015015015015,
+      "eicu_death_rate_other": 0.15255111611329958,
+      "eicu_death_rate_diff": -0.0024009659631494262,
+      "eicu_or": 0.9894223260854068,
+      "eicu_or_woolf_ci": [
+        0.7317463517446259,
+        1.3378359004076124
+      ],
+      "eicu_or_boot_ci": [
+        0.762545418567942,
+        1.2413096567212563
+      ],
+      "impl_same_sign": false,
+      "protocol_same_sign_adj": false,
+      "protocol_same_sign_crude": false
+    },
+    {
+      "no": 4,
+      "path": "lactate|B3|升高 → sbp|低位下滑型|B4",
+      "mimic_train_coef": 1.2224075367580274,
+      "mimic_train_coef_ci": [
+        0.724643691537785,
+        1.7201713819782698
+      ],
+      "mimic_train_direction": "risk(+)",
+      "mimic_train_crude_diff": 0.3587563114536274,
+      "mimic_train_crude_sign": 1,
+      "mimic_train_support": 84,
+      "eicu_support": 107,
+      "eicu_support_ok": true,
+      "eicu_death_rate_path": 0.17757009345794392,
+      "eicu_death_rate_other": 0.15238979118329465,
+      "eicu_death_rate_diff": 0.025180302274649263,
+      "eicu_or": 1.2253987011412102,
+      "eicu_or_woolf_ci": [
+        0.7494181185468534,
+        2.003690516143673
+      ],
+      "eicu_or_boot_ci": [
+        0.7094502896238323,
+        1.7001701740156614
+      ],
+      "impl_same_sign": true,
+      "protocol_same_sign_adj": true,
+      "protocol_same_sign_crude": true
+    },
+    {
+      "no": 5,
+      "path": "gcs_total|B3|下降 → creatinine|B4|升高",
+      "mimic_train_coef": 0.9705974236335378,
+      "mimic_train_coef_ci": [
+        0.48903067715715615,
+        1.4521641701099195
+      ],
+      "mimic_train_direction": "risk(+)",
+      "mimic_train_crude_diff": 0.29005661934459454,
+      "mimic_train_crude_sign": 1,
+      "mimic_train_support": 102,
+      "eicu_support": 164,
+      "eicu_support_ok": true,
+      "eicu_death_rate_path": 0.14634146341463414,
+      "eicu_death_rate_other": 0.15256129902759039,
+      "eicu_death_rate_diff": -0.006219835612956248,
+      "eicu_or": 0.9684994511901008,
+      "eicu_or_woolf_ci": [
+        0.6295606434506982,
+        1.4899139530296608
+      ],
+      "eicu_or_boot_ci": [
+        0.6239607315794405,
+        1.3298601479092993
+      ],
+      "impl_same_sign": false,
+      "protocol_same_sign_adj": false,
+      "protocol_same_sign_crude": false
+    },
+    {
+      "no": 6,
+      "path": "creatinine|B3|升高 → ph|B4|下降",
+      "mimic_train_coef": 0.980529581086119,
+      "mimic_train_coef_ci": [
+        0.5435436163859769,
+        1.417515545786261
+      ],
+      "mimic_train_direction": "risk(+)",
+      "mimic_train_crude_diff": 0.30976502572715403,
+      "mimic_train_crude_sign": 1,
+      "mimic_train_support": 111,
+      "eicu_support": 220,
+      "eicu_support_ok": true,
+      "eicu_death_rate_path": 0.16818181818181818,
+      "eicu_death_rate_other": 0.15235340765965388,
+      "eicu_death_rate_diff": 0.0158284105221643,
+      "eicu_or": 1.1368503898255389,
+      "eicu_or_woolf_ci": [
+        0.7985484204148453,
+        1.6184726884502056
+      ],
+      "eicu_or_boot_ci": [
+        0.8241818583666572,
+        1.4577179547807986
+      ],
+      "impl_same_sign": true,
+      "protocol_same_sign_adj": true,
+      "protocol_same_sign_crude": true
+    },
+    {
+      "no": 7,
+      "path": "dbp|低位回升型|B1 → lactate|B4|升高",
+      "mimic_train_coef": 1.0147573430761172,
+      "mimic_train_coef_ci": [
+        0.36422413256316877,
+        1.6652905535890656
+      ],
+      "mimic_train_direction": "risk(+)",
+      "mimic_train_crude_diff": 0.43911331181380386,
+      "mimic_train_crude_sign": 1,
+      "mimic_train_support": 102,
+      "eicu_support": 85,
+      "eicu_support_ok": true,
+      "eicu_death_rate_path": 0.1411764705882353,
+      "eicu_death_rate_other": 0.15255887261264603,
+      "eicu_death_rate_diff": -0.011382402024410737,
+      "eicu_or": 0.9445841225750515,
+      "eicu_or_woolf_ci": [
+        0.5179793377382751,
+        1.7225381392948749
+      ],
+      "eicu_or_boot_ci": [
+        0.4813346363020891,
+        1.4679717467957336
+      ],
+      "impl_same_sign": false,
+      "protocol_same_sign_adj": false,
+      "protocol_same_sign_crude": false
+    },
+    {
+      "no": 8,
+      "path": "urine_output_ml|低位波动型|B1 → creatinine|B4|升高",
+      "mimic_train_coef": -1.5443734207584547,
+      "mimic_train_coef_ci": [
+        -2.7910178464443307,
+        -0.297728995072579
+      ],
+      "mimic_train_direction": "protective(-)",
+      "mimic_train_crude_diff": -0.13337781006804245,
+      "mimic_train_crude_sign": -1,
+      "mimic_train_support": 76,
+      "eicu_support": 184,
+      "eicu_support_ok": true,
+      "eicu_death_rate_path": 0.08695652173913043,
+      "eicu_death_rate_other": 0.1530759558515345,
+      "eicu_death_rate_diff": -0.06611943411240406,
+      "eicu_or": 0.5417106881339486,
+      "eicu_or_woolf_ci": [
+        0.3262870780119256,
+        0.899362829280756
+      ],
+      "eicu_or_boot_ci": [
+        0.3443943641828656,
+        0.886998085639267
+      ],
+      "impl_same_sign": false,
+      "protocol_same_sign_adj": true,
+      "protocol_same_sign_crude": true
+    },
+    {
+      "no": 9,
+      "path": "potassium|B3|升高 → lactate|B4|下降",
+      "mimic_train_coef": 1.3204214937103735,
+      "mimic_train_coef_ci": [
+        0.732337723804308,
+        1.9085052636164392
+      ],
+      "mimic_train_direction": "risk(+)",
+      "mimic_train_crude_diff": 0.40166449487946,
+      "mimic_train_crude_sign": 1,
+      "mimic_train_support": 57,
+      "eicu_support": 149,
+      "eicu_support_ok": true,
+      "eicu_death_rate_path": 0.16778523489932887,
+      "eicu_death_rate_other": 0.15240840617444673,
+      "eicu_death_rate_diff": 0.015376828724882136,
+      "eicu_or": 1.1389226266052466,
+      "eicu_or_woolf_ci": [
+        0.7426181591650319,
+        1.746718328099932
+      ],
+      "eicu_or_boot_ci": [
+        0.7459068606051583,
+        1.5232952914445712
+      ],
+      "impl_same_sign": true,
+      "protocol_same_sign_adj": true,
+      "protocol_same_sign_crude": true
+    },
+    {
+      "no": 10,
+      "path": "respiratory_rate|末期骤降型|B1 → urine_output_ml|低位波动型|B4",
+      "mimic_train_coef": -1.4857488399500627,
+      "mimic_train_coef_ci": [
+        -2.580570940337243,
+        -0.3909267395628824
+      ],
+      "mimic_train_direction": "protective(-)",
+      "mimic_train_crude_diff": -0.12751205670823737,
+      "mimic_train_crude_sign": -1,
+      "mimic_train_support": 103,
+      "eicu_support": 88,
+      "eicu_support_ok": true,
+      "eicu_death_rate_path": 0.13636363636363635,
+      "eicu_death_rate_other": 0.1525800917984144,
+      "eicu_death_rate_diff": -0.016216455434778038,
+      "eicu_or": 0.9073926800959891,
+      "eicu_or_woolf_ci": [
+        0.4984354357694443,
+        1.6518919338484492
+      ],
+      "eicu_or_boot_ci": [
+        0.4524670780587998,
+        1.3853468112901517
+      ],
+      "impl_same_sign": false,
+      "protocol_same_sign_adj": true,
+      "protocol_same_sign_crude": true
+    },
+    {
+      "no": 11,
+      "path": "urine_output_ml|低位波动型|B1 → urine_output_ml|进行性下降型|B2",
+      "mimic_train_coef": -1.4408632585215357,
+      "mimic_train_coef_ci": [
+        -2.0830845302663294,
+        -0.7986419867767419
+      ],
+      "mimic_train_direction": "protective(-)",
+      "mimic_train_crude_diff": -0.1236861077185925,
+      "mimic_train_crude_sign": -1,
+      "mimic_train_support": 334,
+      "eicu_support": 323,
+      "eicu_support_ok": true,
+      "eicu_death_rate_path": 0.11145510835913312,
+      "eicu_death_rate_other": 0.15313583950501547,
+      "eicu_death_rate_diff": -0.041680731145882347,
+      "eicu_or": 0.7020005987824757,
+      "eicu_or_woolf_ci": [
+        0.49647071037420926,
+        0.9926161410801217
+      ],
+      "eicu_or_boot_ci": [
+        0.5211021282092575,
+        0.9731437517101906
+      ],
+      "impl_same_sign": false,
+      "protocol_same_sign_adj": true,
+      "protocol_same_sign_crude": true
+    },
+    {
+      "no": 12,
+      "path": "dbp|持续下降型|B1 → gcs_total|B4|下降",
+      "mimic_train_coef": 1.1658880990519782,
+      "mimic_train_coef_ci": [
+        0.6050422100859286,
+        1.7267339880180277
+      ],
+      "mimic_train_direction": "risk(+)",
+      "mimic_train_crude_diff": 0.2901870074260805,
+      "mimic_train_crude_sign": 1,
+      "mimic_train_support": 67,
+      "eicu_support": 120,
+      "eicu_support_ok": true,
+      "eicu_death_rate_path": 0.18333333333333332,
+      "eicu_death_rate_other": 0.1523424803825974,
+      "eicu_death_rate_diff": 0.03099085295073592,
+      "eicu_or": 1.270841535109532,
+      "eicu_or_woolf_ci": [
+        0.8026804819538266,
+        2.0120561589193535
+      ],
+      "eicu_or_boot_ci": [
+        0.8147565655508513,
+        1.6548250984810566
+      ],
+      "impl_same_sign": true,
+      "protocol_same_sign_adj": true,
+      "protocol_same_sign_crude": true
+    },
+    {
+      "no": 13,
+      "path": "hemoglobin|B3|升高 → creatinine|B4|升高",
+      "mimic_train_coef": 0.873809111510467,
+      "mimic_train_coef_ci": [
+        0.2970457148850313,
+        1.4505725081359029
+      ],
+      "mimic_train_direction": "risk(+)",
+      "mimic_train_crude_diff": 0.33536084656922205,
+      "mimic_train_crude_sign": 1,
+      "mimic_train_support": 67,
+      "eicu_support": 192,
+      "eicu_support_ok": true,
+      "eicu_death_rate_path": 0.171875,
+      "eicu_death_rate_other": 0.15234102026554858,
+      "eicu_death_rate_diff": 0.019533979734451423,
+      "eicu_or": 1.1685141085000856,
+      "eicu_or_woolf_ci": [
+        0.8036211203609152,
+        1.6990907620129772
+      ],
+      "eicu_or_boot_ci": [
+        0.8148096097974628,
+        1.5311946579111013
+      ],
+      "impl_same_sign": true,
+      "protocol_same_sign_adj": true,
+      "protocol_same_sign_crude": true
+    },
+    {
+      "no": 14,
+      "path": "ph|B1|升高 → gcs_total|B2|升高",
+      "mimic_train_coef": -1.4150893252898826,
+      "mimic_train_coef_ci": [
+        -2.4467617402203574,
+        -0.38341691035940806
+      ],
+      "mimic_train_direction": "protective(-)",
+      "mimic_train_crude_diff": -0.11641511641511643,
+      "mimic_train_crude_sign": -1,
+      "mimic_train_support": 99,
+      "eicu_support": 69,
+      "eicu_support_ok": true,
+      "eicu_death_rate_path": 0.18840579710144928,
+      "eicu_death_rate_other": 0.15239948119325553,
+      "eicu_death_rate_diff": 0.03600631590819375,
+      "eicu_or": 1.3287366554024524,
+      "eicu_or_woolf_ci": [
+        0.7329378760291497,
+        2.408855043725259
+      ],
+      "eicu_or_boot_ci": [
+        0.6833444748546122,
+        1.8287791949446544
+      ],
+      "impl_same_sign": true,
+      "protocol_same_sign_adj": false,
+      "protocol_same_sign_crude": false
+    },
+    {
+      "no": 15,
+      "path": "ph|B3|升高 → creatinine|B4|升高",
+      "mimic_train_coef": 0.5033880533763265,
+      "mimic_train_coef_ci": [
+        0.03485340591649816,
+        0.9719227008361548
+      ],
+      "mimic_train_direction": "risk(+)",
+      "mimic_train_crude_diff": 0.25372183314655455,
+      "mimic_train_crude_sign": 1,
+      "mimic_train_support": 119,
+      "eicu_support": 225,
+      "eicu_support_ok": true,
+      "eicu_death_rate_path": 0.2,
+      "eicu_death_rate_other": 0.15201567749160133,
+      "eicu_death_rate_diff": 0.04798432250839868,
+      "eicu_or": 1.4059793329782708,
+      "eicu_or_woolf_ci": [
+        1.013557405156595,
+        1.9503363842096448
+      ],
+      "eicu_or_boot_ci": [
+        0.9988223594367021,
+        1.6499963935079751
+      ],
+      "impl_same_sign": true,
+      "protocol_same_sign_adj": true,
+      "protocol_same_sign_crude": true
+    }
+  ]
+}

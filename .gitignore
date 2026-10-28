@@ -1,0 +1,22 @@
+# data (PhysioNet-protected; never commit)
+data/
+EICU*/
+*.parquet
+*.pt
+*.pth
+*.npz
+*.npy
+*.pkl
+# generated
+outputs/
+logs/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.ipynb_checkpoints/
+*.docx
+*.pptx
+.DS_Store
+Thumbs.db

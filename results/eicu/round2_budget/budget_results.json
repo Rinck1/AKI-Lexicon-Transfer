@@ -1,0 +1,184 @@
+{
+  "round": "round-2 (post-hoc explore)",
+  "script": "scripts/54_concept_budget_curve.py",
+  "fit": "MIMIC train split only, one full-train logistic per arm (C=1, lbfgs); paths head per stage-46 (max_iter=400)",
+  "seed": 42,
+  "ranking_basis": "|coef| of static+84a fit on MIMIC full train (pre-specified; no eICU/val information)",
+  "K_grid": [
+    10,
+    20,
+    40,
+    84
+  ],
+  "budget_curve": [
+    {
+      "K": 10,
+      "n_concepts": 10,
+      "eicu_auprc": 0.25870156722495646,
+      "eicu_auroc": 0.6758908651269872,
+      "val_auprc_desc": 0.28967472739459377,
+      "val_auroc_desc": 0.7311635616356164
+    },
+    {
+      "K": 20,
+      "n_concepts": 20,
+      "eicu_auprc": 0.26927453049931194,
+      "eicu_auroc": 0.678764794939606,
+      "val_auprc_desc": 0.3137614401427369,
+      "val_auroc_desc": 0.7495149951499515
+    },
+    {
+      "K": 40,
+      "n_concepts": 40,
+      "eicu_auprc": 0.27708047939520336,
+      "eicu_auroc": 0.6894486641118058,
+      "val_auprc_desc": 0.3278023922998641,
+      "val_auroc_desc": 0.7576038260382603
+    },
+    {
+      "K": 84,
+      "n_concepts": 84,
+      "eicu_auprc": 0.28141657708608503,
+      "eicu_auroc": 0.6921264480951222,
+      "val_auprc_desc": 0.33295668322047917,
+      "val_auroc_desc": 0.7606951069510695
+    }
+  ],
+  "sanity_vs_prior": {
+    "k84_vs_cbm_zeroshot_json": {
+      "val_auprc_ref": 0.33295668322047917,
+      "val_auprc_new": 0.33295668322047917,
+      "eicu_auprc_ref": 0.28141657708608503,
+      "eicu_auprc_new": 0.28141657708608503,
+      "max_abs_diff": 0.0
+    },
+    "paths46_refit_vs_stage46_json": {
+      "ref": 0.1876194598798319,
+      "refit": 0.1876194598798319,
+      "abs_diff": 0.0
+    }
+  },
+  "bootstrap": {
+    "B": 1000,
+    "unit": "eICU stay",
+    "paired_across_arms": true,
+    "degenerate_resamples": 0,
+    "retention_ci_note": "retention CI = eICU AUPRC CI bounds / fixed MIMIC val point estimate (approximation; ignores val uncertainty)"
+  },
+  "retention": [
+    {
+      "arm": "static",
+      "val_auprc_desc": 0.22185520372044581,
+      "val_source": "data/external/eicu/_explore_PRED/cbm_zeroshot_results.json",
+      "eicu_auprc": 0.18950368920008434,
+      "eicu_auprc_lo": 0.18029836080161032,
+      "eicu_auprc_hi": 0.19953798766930175,
+      "retention": 0.8541773464050597,
+      "retention_lo": 0.8126848402834841,
+      "retention_hi": 0.8994063890461392,
+      "rank": 1
+    },
+    {
+      "arm": "static+84a",
+      "val_auprc_desc": 0.33295668322047917,
+      "val_source": "data/external/eicu/_explore_PRED/cbm_zeroshot_results.json",
+      "eicu_auprc": 0.28141657708608503,
+      "eicu_auprc_lo": 0.26701861435712865,
+      "eicu_auprc_hi": 0.2957346742738445,
+      "retention": 0.845204770675034,
+      "retention_lo": 0.8019620203277695,
+      "retention_hi": 0.8882076533601616,
+      "rank": 2
+    },
+    {
+      "arm": "static+84(0/1)",
+      "val_auprc_desc": 0.32771214046811614,
+      "val_source": "data/external/eicu/_explore_PRED/cbm_zeroshot_results.json",
+      "eicu_auprc": 0.26890051219311784,
+      "eicu_auprc_lo": 0.25527894704503906,
+      "eicu_auprc_hi": 0.2824944589731557,
+      "retention": 0.8205387563884889,
+      "retention_lo": 0.7789731154921181,
+      "retention_hi": 0.8620201209806576,
+      "rank": 3
+    },
+    {
+      "arm": "static+数值176",
+      "val_auprc_desc": 0.5350900889823079,
+      "val_source": "data/external/eicu/_explore_PRED/sparse_ablation_results.json",
+      "eicu_auprc": 0.4148233389298376,
+      "eicu_auprc_lo": 0.39809973304513624,
+      "eicu_auprc_hi": 0.43312883155627163,
+      "retention": 0.7752401837955799,
+      "retention_lo": 0.7439863702246574,
+      "retention_hi": 0.8094502972014354,
+      "rank": 4
+    },
+    {
+      "arm": "static+15路径",
+      "val_auprc_desc": 0.3492106662154464,
+      "val_source": "data/processed/paths/path_final_7var_motif84_labs11/path_val_reproduce.json",
+      "eicu_auprc": 0.1876194598798319,
+      "eicu_auprc_lo": 0.17897224211466406,
+      "eicu_auprc_hi": 0.19757687186217485,
+      "retention": 0.5372672659548137,
+      "retention_lo": 0.5125050848368036,
+      "retention_hi": 0.5657813204946017,
+      "rank": 5
+    },
+    {
+      "arm": "CBM全臂",
+      "val_auprc_desc": 0.4703404309788888,
+      "val_source": "data/external/eicu/_explore_PRED/cbm_zeroshot_results.json",
+      "eicu_auprc": 0.2124752699166319,
+      "eicu_auprc_lo": 0.2025734832258712,
+      "eicu_auprc_hi": 0.22468652558420762,
+      "retention": 0.45174783182985356,
+      "retention_lo": 0.4306954492605883,
+      "retention_hi": 0.47771042161224,
+      "rank": 6
+    },
+    {
+      "arm": "static+87lab",
+      "val_auprc_desc": 0.44942404503905714,
+      "val_source": "data/external/eicu/_explore_PRED/cbm_zeroshot_results.json",
+      "eicu_auprc": 0.1701063401646951,
+      "eicu_auprc_lo": 0.1625431769037816,
+      "eicu_auprc_hi": 0.17879386498952232,
+      "retention": 0.3784985294899209,
+      "retention_lo": 0.3616699611380512,
+      "retention_hi": 0.3978288811271419,
+      "rank": 7
+    }
+  ],
+  "val_points_source": {
+    "static": [
+      "data/external/eicu/_explore_PRED/cbm_zeroshot_results.json",
+      "static"
+    ],
+    "static+84(0/1)": [
+      "data/external/eicu/_explore_PRED/cbm_zeroshot_results.json",
+      "static+84ind"
+    ],
+    "static+84a": [
+      "data/external/eicu/_explore_PRED/cbm_zeroshot_results.json",
+      "static+84a"
+    ],
+    "static+87lab": [
+      "data/external/eicu/_explore_PRED/cbm_zeroshot_results.json",
+      "static+87lab"
+    ],
+    "CBM全臂": [
+      "data/external/eicu/_explore_PRED/cbm_zeroshot_results.json",
+      "cbm_full"
+    ],
+    "static+15路径": [
+      "data/processed/paths/path_final_7var_motif84_labs11/path_val_reproduce.json",
+      "val_auprc_static_plus_paths"
+    ],
+    "static+数值176": [
+      "data/external/eicu/_explore_PRED/sparse_ablation_results.json",
+      "static+sparse_vals_only"
+    ]
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "stage": "time_shuffle_negative_control",
+  "test_read": false,
+  "val_used": false,
+  "holdout_used": false,
+  "frozen_paths_retuned": false,
+  "seed": 42,
+  "n_train": 7610,
+  "n_train_atoms": 241130,
+  "n_stays_stage_concept_changed": 6968,
+  "static_cv_auprc": 0.24862706707276166,
+  "frozen15_original_cv_auprc": 0.3861623644854147,
+  "frozen15_original_selected_cv_auprc_from_23": 0.3861623644854147,
+  "cooccur_stage_stripped_cv_auprc": 0.369613767284286,
+  "frozen15_shuffled_cv_auprc_mean": 0.30483591068578536,
+  "frozen15_shuffled_cv_auprc_std": 0.007610552134640759,
+  "frozen15_shuffled_cv_by_seed": [
+    {
+      "seed": 42,
+      "frozen15_cv_auprc": 0.30719676992975814,
+      "mean_path_prevalence": 0.01674989049496277,
+      "n_paths_with_support": 15,
+      "stays_with_any_frozen_path": 0.1868593955321945
+    },
+    {
+      "seed": 43,
+      "frozen15_cv_auprc": 0.30886840529004334,
+      "mean_path_prevalence": 0.017135348226018397,
+      "n_paths_with_support": 15,
+      "stays_with_any_frozen_path": 0.18725361366622864
+    },
+    {
+      "seed": 44,
+      "frozen15_cv_auprc": 0.2955786988128297,
+      "mean_path_prevalence": 0.0164257555847569,
+      "n_paths_with_support": 15,
+      "stays_with_any_frozen_path": 0.18212877792378449
+    },
+    {
+      "seed": 45,
+      "frozen15_cv_auprc": 0.29683462612022227,
+      "mean_path_prevalence": 0.016679807271134474,
+      "n_paths_with_support": 15,
+      "stays_with_any_frozen_path": 0.1868593955321945
+    },
+    {
+      "seed": 46,
+      "frozen15_cv_auprc": 0.31570105327607356,
+      "mean_path_prevalence": 0.01686377573368375,
+      "n_paths_with_support": 15,
+      "stays_with_any_frozen_path": 0.1873850197109067
+    }
+  ],
+  "frozen15_original_prevalence": [
+    0.05584756898817345,
+    0.013009198423127463,
+    0.01997371879106439,
+    0.011038107752956636,
+    0.013403416557161629,
+    0.014586070959264126,
+    0.013403416557161629,
+    0.009986859395532195,
+    0.007490144546649146,
+    0.013534822601839684,
+    0.04388961892247043,
+    0.008804204993429697,
+    0.008804204993429697,
+    0.013009198423127463,
+    0.015637319316688568
+  ],
+  "frozen15_shuffled_seed_main_prevalence": [
+    0.019448094612352168,
+    0.01366622864651774,
+    0.025624178712220762,
+    0.01668856767411301,
+    0.021156373193166884,
+    0.014848883048620237,
+    0.014848883048620237,
+    0.014323258869908016,
+    0.007358738501971091,
+    0.025755584756898816,
+    0.019579500657030225,
+    0.023915900131406046,
+    0.014323258869908016,
+    0.007621550591327201,
+    0.012089356110381078
+  ],
+  "delta_frozen15_cv_vs_original": -0.08132645379962933,
+  "delta_frozen15_cv_vs_static": 0.056208843613023696,
+  "delta_cooccur_vs_frozen_original": -0.016548597201128667,
+  "frozen_keys": [
+    "lactate|B1|升高 → urine_output_ml|低位缓升型|B3",
+    "mbp|缓降持平型|B3 → lactate|B4|升高",
+    "wbc|B1|升高 → gcs_total|B4|下降",
+    "lactate|B3|升高 → sbp|低位下滑型|B4",
+    "gcs_total|B3|下降 → creatinine|B4|升高",
+    "creatinine|B3|升高 → ph|B4|下降",
+    "dbp|低位回升型|B1 → lactate|B4|升高",
+    "urine_output_ml|低位波动型|B1 → creatinine|B4|升高",
+    "potassium|B3|升高 → lactate|B4|下降",
+    "respiratory_rate|末期骤降型|B1 → urine_output_ml|低位波动型|B4",
+    "urine_output_ml|低位波动型|B1 → urine_output_ml|进行性下降型|B2",
+    "dbp|持续下降型|B1 → gcs_total|B4|下降",
+    "hemoglobin|B3|升高 → creatinine|B4|升高",
+    "ph|B1|升高 → gcs_total|B2|升高",
+    "ph|B3|升高 → creatinine|B4|升高"
+  ],
+  "remine": {
+    "ran": true,
+    "n_frequent": 9780,
+    "n_stable": 4316,
+    "n_stable_readable": 2584,
+    "n_stable_by_len": {
+      "2": 4231,
+      "3": 84,
+      "4": 1
+    },
+    "orig_n_frequent": 9168,
+    "orig_n_stable": 4886,
+    "orig_n_stable_readable": 2917,
+    "static_cv_auprc": 0.24862706707276166,
+    "selected_cv_auprc": 0.357156609875431,
+    "n_selected": 15,
+    "selected": [
+      "urine_output_ml|低位缓升型|B1 → lactate|B4|升高",
+      "lactate|B1|升高 → urine_output_ml|低位缓升型|B4",
+      "sbp|低位下滑型|B2 → lactate|B3|升高",
+      "urine_output_ml|低位缓升型|B2 → lactate|B3|下降 → urine_output_ml|低位缓升型|B4",
+      "platelet|B1|下降 → lactate|B4|升高",
+      "gcs_total|B1|下降 → lactate|B2|升高",
+      "lactate|B3|升高 → creatinine|B4|升高",
+      "bicarbonate|B1|升高 → urine_output_ml|进行性下降型|B2",
+      "lactate|B1|升高 → mbp|缓降持平型|B3",
+      "gcs_total|B1|升高 → urine_output_ml|低位波动型|B4",
+      "lactate|B1|下降 → gcs_total|B3|下降",
+      "sbp|低位下滑型|B1 → lactate|B3|升高 → sbp|低位下滑型|B4",
+      "heart_rate|持续上升型|B2 → lactate|B3|下降 → urine_output_ml|低位缓升型|B4",
+      "urine_output_ml|进行性下降型|B1 → spo2|低位波动型|B2 → sbp|恢复上升型|B4",
+      "wbc|B1|下降 → lactate|B4|升高"
+    ],
+    "exact_overlap_with_frozen15": [],
+    "n_exact_overlap": 0,
+    "n_identity_pair_overlap": 1,
+    "n_identity_bag_overlap": 3,
+    "identity_bag_overlap": [
+      ["lactate|升高", "mbp|缓降持平型"],
+      ["lactate|升高", "sbp|低位下滑型"],
+      ["lactate|升高", "urine_output_ml|低位缓升型"]
+    ]
+  },
+  "protocol": {
+    "shuffle": "within-stay permutation of stage_idx; atom names rewritten",
+    "preserves": [
+      "stage occupancy per stay",
+      "stage-stripped concept bag"
+    ],
+    "destroys": [
+      "which concept sits in which stage"
+    ],
+    "min_support": 39,
+    "forward_select": "same as 23; separate directory"
+  },
+  "created_at": "2026-08-25T19:21:41",
+  "payload_sha256": "a07da53f53d4826c71b6d7e814356df7ab56e66e10acffad4a634303584127ed"
+}

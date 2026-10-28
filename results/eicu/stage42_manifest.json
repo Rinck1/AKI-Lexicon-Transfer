@@ -1,0 +1,13 @@
+{
+  "stage": "42_eicu_kdigo_cohort",
+  "n_aki": 28300,
+  "n_primary": 21657,
+  "n_urine_complete": 12539,
+  "mortality_primary": 0.15251419864247126,
+  "onset_by": {
+    "creatinine_only": 22284,
+    "urine_only": 6005,
+    "creatinine_and_urine": 11
+  },
+  "n_skip_no_cr_urine": 361
+}

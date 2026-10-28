@@ -1,0 +1,35 @@
+# AKI Research Project — Python Dependencies
+# Install: pip install -r requirements.txt
+
+# Core Data Processing
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+pyarrow>=12.0
+
+# Machine Learning & Statistics
+scikit-learn>=1.3
+xgboost>=2.0
+shap>=0.42
+imbalanced-learn>=0.11
+# Deep learning (scripts/09_dl_baseline.py) — install matching CUDA build from pytorch.org
+# torch>=2.0
+
+# Time Series
+tslearn>=0.6
+dtaidistance>=2.3
+sktime>=0.21
+
+# Visualization
+matplotlib>=3.7
+seaborn>=0.12
+plotly>=5.15
+
+# Survival Analysis
+lifelines>=0.27
+
+# Utilities
+tqdm>=4.65
+joblib>=1.3
+pyyaml>=6.0
+pytest>=7.0

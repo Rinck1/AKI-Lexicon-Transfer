@@ -1,0 +1,127 @@
+{
+  "round": "round-2",
+  "post_hoc": true,
+  "tuning_best": {
+    "max_depth": 3,
+    "learning_rate": 0.05,
+    "n_estimators_final": 147
+  },
+  "fairness": "features = 11 static + 11 lab vars x 4 stages x {last,min,max,delta}; no vitals morphology; tuning only inside MIMIC train (SUBJECT-grouped CV); MIMIC val descriptive once after freeze; holdout untouched; eICU zero-refit.",
+  "models": {
+    "xgb_static_num176": {
+      "mimic_val_descriptive": {
+        "n": 2537,
+        "prevalence": 0.145447378793851,
+        "auprc": 0.5709546337912977,
+        "auroc": 0.8477659776597765,
+        "brier": 0.09010550054901885
+      },
+      "eicu_zeroshot": {
+        "n": 21657,
+        "prevalence": 0.15251419864247126,
+        "auprc": 0.4414974823322228,
+        "auroc": 0.7835093400285851,
+        "brier": 0.1073368076541283
+      }
+    },
+    "xgb_static_num176_pattern132_additional_arm": {
+      "mimic_val_descriptive": {
+        "n": 2537,
+        "prevalence": 0.145447378793851,
+        "auprc": 0.5728323228639153,
+        "auroc": 0.8476709767097671,
+        "brier": 0.0902984502212896
+      },
+      "eicu_zeroshot": {
+        "n": 21657,
+        "prevalence": 0.15251419864247126,
+        "auprc": 0.43923257803976634,
+        "auroc": 0.7829403917591897,
+        "brier": 0.10734944316365756
+      }
+    },
+    "logistic_static_num176_reproduction": {
+      "mimic_val_descriptive": {
+        "n": 2537,
+        "prevalence": 0.145447378793851,
+        "auprc": 0.5350793580516009,
+        "auroc": 0.8401234012340124,
+        "brier": 0.09411930070974509
+      },
+      "eicu_zeroshot": {
+        "n": 21657,
+        "prevalence": 0.15251419864247126,
+        "auprc": 0.4152722195023229,
+        "auroc": 0.7532745103686436,
+        "brier": 0.11244731061252577
+      },
+      "reference_round2_numeric_linear": {
+        "auprc": 0.415,
+        "auroc": 0.753,
+        "brier": 0.113
+      }
+    },
+    "logistic_static_reference": {
+      "eicu_zeroshot": {
+        "n": 21657,
+        "prevalence": 0.15251419864247126,
+        "auprc": 0.18950368920008434,
+        "auroc": 0.5724165337721352,
+        "brier": 0.12990032202335702
+      },
+      "reference_round1": {
+        "auprc": 0.19
+      }
+    }
+  },
+  "bootstrap_eicu_xgb_minus_linear": {
+    "auprc_diff_ci95": [
+      0.015149257728287992,
+      0.036360877283676055
+    ],
+    "auroc_diff_ci95": [
+      0.023270360648863217,
+      0.03717244569355936
+    ],
+    "auprc_xgb_ci95": [
+      0.4235703106537091,
+      0.45968296206687137
+    ],
+    "auprc_diff_point": 0.026225262829899898,
+    "auroc_diff_point": 0.03023482965994151,
+    "brier_diff_point": -0.005110502958397475
+  },
+  "calibration_slope_intercept_eicu": {
+    "xgb_num176": {
+      "slope": 0.9069241089337117,
+      "intercept": 0.10239645266331704
+    },
+    "logistic_num176": {
+      "slope": 0.7065727626844791,
+      "intercept": -0.1200181572736739
+    },
+    "logistic_static": {
+      "slope": 0.4963821342669314,
+      "intercept": -0.7062598605215079
+    }
+  },
+  "importance_gain_share": {
+    "by_stat": {
+      "last": 0.313957516876573,
+      "min": 0.27446310632662574,
+      "max": 0.24183718012374394,
+      "delta": 0.12183271126938512,
+      "static": 0.04790948540367224
+    },
+    "by_var_top8": {
+      "gcs_total": 0.19594339946830566,
+      "bun": 0.12258719392800778,
+      "platelet": 0.08617058178588972,
+      "lactate": 0.08556937156828526,
+      "bicarbonate": 0.07475856257788596,
+      "ph": 0.0670492595892869,
+      "hemoglobin": 0.06646294657683455,
+      "wbc": 0.06503200332177905
+    }
+  }
+}

@@ -1,0 +1,6 @@
+step,n_stays,n_subjects,note
+00_icu_base,40842,32877,
+01_kdigo_aki_any,16583,14596,stage>=1 by creatinine and/or urine (urine-only allowed)
+02_ha_aki_stays,15619,13895,all HA-AKI stays (CA_MAX_HOURS=0.0); before first-HA dedupe
+03_first_ha_aki_per_subject,13895,13895,per SUBJECT_ID: earliest HA-AKI onset stay
+04_landmark_eligible_48h,12684,12684,alive & hospitalized at t0+48h

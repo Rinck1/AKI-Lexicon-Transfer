@@ -1,0 +1,96 @@
+{
+  "post_hoc": true,
+  "port_max_abs_diff": 0.0,
+  "train_raw_continuous_nan_rate": 0.3578270218611874,
+  "arms": {
+    "static": {
+      "mimic_val(desc)": {
+        "n": 2537,
+        "prevalence": 0.145447378793851,
+        "auprc": 0.22185520372044581,
+        "auroc": 0.64730022300223,
+        "brier": 0.12104326800139684
+      },
+      "eicu_zeroshot": {
+        "n": 21657,
+        "prevalence": 0.15251419864247126,
+        "auprc": 0.18950368920008434,
+        "auroc": 0.5724165337721352,
+        "brier": 0.12990032203169538
+      }
+    },
+    "static+sparse308": {
+      "mimic_val(desc)": {
+        "n": 2537,
+        "prevalence": 0.145447378793851,
+        "auprc": 0.5298608182034933,
+        "auroc": 0.8320083200832009,
+        "brier": 0.09508231003645815
+      },
+      "eicu_zeroshot": {
+        "n": 21657,
+        "prevalence": 0.15251419864247126,
+        "auprc": 0.38838877314720816,
+        "auroc": 0.7261318930677139,
+        "brier": 0.11643056696206068
+      }
+    },
+    "Bproxy_static_84a_sparse": {
+      "mimic_val(desc)": {
+        "n": 2537,
+        "prevalence": 0.145447378793851,
+        "auprc": 0.5348699693199317,
+        "auroc": 0.8360408604086039,
+        "brier": 0.09461272957095206
+      },
+      "eicu_zeroshot": {
+        "n": 21657,
+        "prevalence": 0.15251419864247126,
+        "auprc": 0.38490187325758907,
+        "auroc": 0.7198651072256719,
+        "brier": 0.11730538454525397
+      }
+    },
+    "Bproxy_full_84a_87lab_sparse": {
+      "mimic_val(desc)": {
+        "n": 2537,
+        "prevalence": 0.145447378793851,
+        "auprc": 0.5264089906862398,
+        "auroc": 0.83430084300843,
+        "brier": 0.09683546135660616
+      },
+      "eicu_zeroshot": {
+        "n": 21657,
+        "prevalence": 0.15251419864247126,
+        "auprc": 0.3444321216575904,
+        "auroc": 0.6866090445611456,
+        "brier": 0.12349560077312617
+      }
+    }
+  },
+  "B_arm_deployment_checklist": {
+    "post_hoc": true,
+    "model": "<PROJECT_DIR>/data/processed/gnn/gnn_ablate_B_act_sparse_static/ckpt_best.pt",
+    "model_exists": true,
+    "branch_flags": {
+      "use_act": true,
+      "use_sparse": true,
+      "use_static": true,
+      "use_graph": false
+    },
+    "required_inputs": {
+      "act_bag_252": "per-stay 252-dim activation bag over node types var|L|k|stage (activation_name), needs activations_long.parquet-equivalent on eICU",
+      "sparse_308": "recomputable for eICU from hourly_grid_48h.parquet (validated port, this script)",
+      "static_11": "available in eicu stay_features_48h.parquet"
+    },
+    "eicu_assets": {
+      "activations_long_exists": false,
+      "motif_atoms_winner_only": "data/external/eicu/motif_atoms.parquet (84 family-level winner events, no (L,k) identity)",
+      "sparse_recomputable": true,
+      "hourly_grid_rows": 1039536
+    },
+    "blocker": "eICU has NO activations_long: winner motif atoms collapse (var,L,k)->family (84 concepts); the 252-node activation bag requires re-running frozen-template shapelet matching (scripts/14-15 equivalent) over eICU hourly grids with shapelet_frozen_qp50.pt templates (torch soft-DTW, ~21,657 stays x 7 vars x 48h).",
+    "risk": "feature-drift: winner/event_rank policy, a_min=0.5 filter, empty-graph stay handling (MIMIC train_empty=635), and grid definition differences between MIMIC and eICU pipelines.",
+    "feasible_in_30_60min": false
+  }
+}

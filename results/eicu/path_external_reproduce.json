@@ -1,0 +1,333 @@
+{
+  "stage": "46_eicu_reproduce_paths",
+  "freeze_sha256": "966ca9be40f9c7abdca6f95416434bcd9abda4d82e50523f4a3e70d5471458b7",
+  "refit": false,
+  "urine_complete_min_hours": 12,
+  "n_paths": 15,
+  "full": {
+    "label": "all_landmark_ha_aki",
+    "n": 21657,
+    "mortality": 0.15251419864247126,
+    "auprc_static": 0.18950368920008434,
+    "auprc_static_paths": 0.1876194598798319,
+    "auroc_static": 0.5724165337721352,
+    "auroc_static_paths": 0.5789181139741375,
+    "n_same_sign": 9,
+    "n_support_ge_20": 15,
+    "paths": [
+      {
+        "path": "lactate|B1|升高 → urine_output_ml|低位缓升型|B3",
+        "support": 410,
+        "support_ok": true,
+        "death_rate_path": 0.1926829268292683,
+        "death_rate_other": 0.15173906904504164,
+        "odds_ratio": 1.3404800211053804,
+        "same_sign_as_risk": true,
+        "same_sign": true
+      },
+      {
+        "path": "mbp|缓降持平型|B3 → lactate|B4|升高",
+        "support": 78,
+        "support_ok": true,
+        "death_rate_path": 0.23076923076923078,
+        "death_rate_other": 0.15223133602113165,
+        "odds_ratio": 1.7026893776938739,
+        "same_sign_as_risk": true,
+        "same_sign": true
+      },
+      {
+        "path": "wbc|B1|升高 → gcs_total|B4|下降",
+        "support": 333,
+        "support_ok": true,
+        "death_rate_path": 0.15015015015015015,
+        "death_rate_other": 0.15255111611329958,
+        "odds_ratio": 0.9894223260854068,
+        "same_sign_as_risk": true,
+        "same_sign": false
+      },
+      {
+        "path": "lactate|B3|升高 → sbp|低位下滑型|B4",
+        "support": 107,
+        "support_ok": true,
+        "death_rate_path": 0.17757009345794392,
+        "death_rate_other": 0.15238979118329465,
+        "odds_ratio": 1.2253987011412102,
+        "same_sign_as_risk": true,
+        "same_sign": true
+      },
+      {
+        "path": "gcs_total|B3|下降 → creatinine|B4|升高",
+        "support": 164,
+        "support_ok": true,
+        "death_rate_path": 0.14634146341463414,
+        "death_rate_other": 0.15256129902759039,
+        "odds_ratio": 0.9684994511901008,
+        "same_sign_as_risk": true,
+        "same_sign": false
+      },
+      {
+        "path": "creatinine|B3|升高 → ph|B4|下降",
+        "support": 220,
+        "support_ok": true,
+        "death_rate_path": 0.16818181818181818,
+        "death_rate_other": 0.15235340765965388,
+        "odds_ratio": 1.1368503898255389,
+        "same_sign_as_risk": true,
+        "same_sign": true
+      },
+      {
+        "path": "dbp|低位回升型|B1 → lactate|B4|升高",
+        "support": 85,
+        "support_ok": true,
+        "death_rate_path": 0.1411764705882353,
+        "death_rate_other": 0.15255887261264603,
+        "odds_ratio": 0.9445841225750515,
+        "same_sign_as_risk": true,
+        "same_sign": false
+      },
+      {
+        "path": "urine_output_ml|低位波动型|B1 → creatinine|B4|升高",
+        "support": 184,
+        "support_ok": true,
+        "death_rate_path": 0.08695652173913043,
+        "death_rate_other": 0.1530759558515345,
+        "odds_ratio": 0.5417106881339486,
+        "same_sign_as_risk": true,
+        "same_sign": false
+      },
+      {
+        "path": "potassium|B3|升高 → lactate|B4|下降",
+        "support": 149,
+        "support_ok": true,
+        "death_rate_path": 0.16778523489932887,
+        "death_rate_other": 0.15240840617444673,
+        "odds_ratio": 1.1389226266052466,
+        "same_sign_as_risk": true,
+        "same_sign": true
+      },
+      {
+        "path": "respiratory_rate|末期骤降型|B1 → urine_output_ml|低位波动型|B4",
+        "support": 88,
+        "support_ok": true,
+        "death_rate_path": 0.13636363636363635,
+        "death_rate_other": 0.1525800917984144,
+        "odds_ratio": 0.9073926800959891,
+        "same_sign_as_risk": true,
+        "same_sign": false
+      },
+      {
+        "path": "urine_output_ml|低位波动型|B1 → urine_output_ml|进行性下降型|B2",
+        "support": 323,
+        "support_ok": true,
+        "death_rate_path": 0.11145510835913312,
+        "death_rate_other": 0.15313583950501547,
+        "odds_ratio": 0.7020005987824757,
+        "same_sign_as_risk": true,
+        "same_sign": false
+      },
+      {
+        "path": "dbp|持续下降型|B1 → gcs_total|B4|下降",
+        "support": 120,
+        "support_ok": true,
+        "death_rate_path": 0.18333333333333332,
+        "death_rate_other": 0.1523424803825974,
+        "odds_ratio": 1.270841535109532,
+        "same_sign_as_risk": true,
+        "same_sign": true
+      },
+      {
+        "path": "hemoglobin|B3|升高 → creatinine|B4|升高",
+        "support": 192,
+        "support_ok": true,
+        "death_rate_path": 0.171875,
+        "death_rate_other": 0.15234102026554858,
+        "odds_ratio": 1.1685141085000856,
+        "same_sign_as_risk": true,
+        "same_sign": true
+      },
+      {
+        "path": "ph|B1|升高 → gcs_total|B2|升高",
+        "support": 69,
+        "support_ok": true,
+        "death_rate_path": 0.18840579710144928,
+        "death_rate_other": 0.15239948119325553,
+        "odds_ratio": 1.3287366554024524,
+        "same_sign_as_risk": true,
+        "same_sign": true
+      },
+      {
+        "path": "ph|B3|升高 → creatinine|B4|升高",
+        "support": 225,
+        "support_ok": true,
+        "death_rate_path": 0.2,
+        "death_rate_other": 0.15201567749160133,
+        "odds_ratio": 1.4059793329782708,
+        "same_sign_as_risk": true,
+        "same_sign": true
+      }
+    ]
+  },
+  "urine_complete": {
+    "label": "urine_complete",
+    "n": 12539,
+    "mortality": 0.15703006619347634,
+    "auprc_static": 0.18927666850090152,
+    "auprc_static_paths": 0.19098900605072117,
+    "auroc_static": 0.5699168473688434,
+    "auroc_static_paths": 0.5783254205559877,
+    "n_same_sign": 7,
+    "n_support_ge_20": 15,
+    "paths": [
+      {
+        "path": "lactate|B1|升高 → urine_output_ml|低位缓升型|B3",
+        "support": 407,
+        "support_ok": true,
+        "death_rate_path": 0.1941031941031941,
+        "death_rate_other": 0.15578635014836795,
+        "odds_ratio": 1.311176164407715,
+        "same_sign_as_risk": true,
+        "same_sign": true
+      },
+      {
+        "path": "mbp|缓降持平型|B3 → lactate|B4|升高",
+        "support": 41,
+        "support_ok": true,
+        "death_rate_path": 0.14634146341463414,
+        "death_rate_other": 0.15706513042086734,
+        "odds_ratio": 0.9824472682799112,
+        "same_sign_as_risk": true,
+        "same_sign": false
+      },
+      {
+        "path": "wbc|B1|升高 → gcs_total|B4|下降",
+        "support": 179,
+        "support_ok": true,
+        "death_rate_path": 0.15083798882681565,
+        "death_rate_other": 0.15711974110032362,
+        "odds_ratio": 0.9671793573432919,
+        "same_sign_as_risk": true,
+        "same_sign": false
+      },
+      {
+        "path": "lactate|B3|升高 → sbp|低位下滑型|B4",
+        "support": 64,
+        "support_ok": true,
+        "death_rate_path": 0.15625,
+        "death_rate_other": 0.15703406813627255,
+        "odds_ratio": 1.0339957534570465,
+        "same_sign_as_risk": false,
+        "same_sign": false
+      },
+      {
+        "path": "gcs_total|B3|下降 → creatinine|B4|升高",
+        "support": 95,
+        "support_ok": true,
+        "death_rate_path": 0.15789473684210525,
+        "death_rate_other": 0.15702346512375442,
+        "odds_ratio": 1.0334663279039136,
+        "same_sign_as_risk": true,
+        "same_sign": true
+      },
+      {
+        "path": "creatinine|B3|升高 → ph|B4|下降",
+        "support": 128,
+        "support_ok": true,
+        "death_rate_path": 0.1875,
+        "death_rate_other": 0.15671581661429376,
+        "odds_ratio": 1.2613047653830027,
+        "same_sign_as_risk": true,
+        "same_sign": true
+      },
+      {
+        "path": "dbp|低位回升型|B1 → lactate|B4|升高",
+        "support": 47,
+        "support_ok": true,
+        "death_rate_path": 0.14893617021276595,
+        "death_rate_other": 0.15706051873198848,
+        "odds_ratio": 0.9936777541873082,
+        "same_sign_as_risk": true,
+        "same_sign": false
+      },
+      {
+        "path": "urine_output_ml|低位波动型|B1 → creatinine|B4|升高",
+        "support": 184,
+        "support_ok": true,
+        "death_rate_path": 0.08695652173913043,
+        "death_rate_other": 0.15807365439093485,
+        "odds_ratio": 0.5214448084128084,
+        "same_sign_as_risk": true,
+        "same_sign": false
+      },
+      {
+        "path": "potassium|B3|升高 → lactate|B4|下降",
+        "support": 95,
+        "support_ok": true,
+        "death_rate_path": 0.17894736842105263,
+        "death_rate_other": 0.1568627450980392,
+        "odds_ratio": 1.197998646190985,
+        "same_sign_as_risk": true,
+        "same_sign": true
+      },
+      {
+        "path": "respiratory_rate|末期骤降型|B1 → urine_output_ml|低位波动型|B4",
+        "support": 88,
+        "support_ok": true,
+        "death_rate_path": 0.13636363636363635,
+        "death_rate_other": 0.15717613043129067,
+        "odds_ratio": 0.8760089817110327,
+        "same_sign_as_risk": true,
+        "same_sign": false
+      },
+      {
+        "path": "urine_output_ml|低位波动型|B1 → urine_output_ml|进行性下降型|B2",
+        "support": 323,
+        "support_ok": true,
+        "death_rate_path": 0.11145510835913312,
+        "death_rate_other": 0.15823510150622136,
+        "odds_ratio": 0.6752300963560113,
+        "same_sign_as_risk": true,
+        "same_sign": false
+      },
+      {
+        "path": "dbp|持续下降型|B1 → gcs_total|B4|下降",
+        "support": 78,
+        "support_ok": true,
+        "death_rate_path": 0.20512820512820512,
+        "death_rate_other": 0.1567289944627237,
+        "odds_ratio": 1.4201402610698746,
+        "same_sign_as_risk": true,
+        "same_sign": true
+      },
+      {
+        "path": "hemoglobin|B3|升高 → creatinine|B4|升高",
+        "support": 95,
+        "support_ok": true,
+        "death_rate_path": 0.2,
+        "death_rate_other": 0.156702025072324,
+        "odds_ratio": 1.3714784042301873,
+        "same_sign_as_risk": true,
+        "same_sign": true
+      },
+      {
+        "path": "ph|B1|升高 → gcs_total|B2|升高",
+        "support": 42,
+        "support_ok": true,
+        "death_rate_path": 0.14285714285714285,
+        "death_rate_other": 0.15707769864767543,
+        "odds_ratio": 0.955440208461965,
+        "same_sign_as_risk": true,
+        "same_sign": false
+      },
+      {
+        "path": "ph|B3|升高 → creatinine|B4|升高",
+        "support": 110,
+        "support_ok": true,
+        "death_rate_path": 0.2,
+        "death_rate_other": 0.15664977069756214,
+        "odds_ratio": 1.368442810208655,
+        "same_sign_as_risk": true,
+        "same_sign": true
+      }
+    ]
+  }
+}

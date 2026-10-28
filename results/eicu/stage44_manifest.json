@@ -1,0 +1,18 @@
+{
+  "stage": "44_eicu_stay_features",
+  "n": 21657,
+  "static_cols": [
+    "AGE",
+    "GENDER_M",
+    "onset_stage",
+    "onset_hour_from_icu",
+    "CHF",
+    "Diabetes",
+    "HTN",
+    "CKD_FLAG",
+    "COPD",
+    "LiverDisease",
+    "Arrhythmia"
+  ],
+  "mortality": 0.15251419864247126
+}

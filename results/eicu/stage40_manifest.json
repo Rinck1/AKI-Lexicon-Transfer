@@ -1,0 +1,9 @@
+{
+  "stage": "40_eicu_build_icu_base",
+  "eicu_dir": "<EICU_DIR>",
+  "n_stays": 104266,
+  "n_subjects": 91627,
+  "mortality": 0.08618341549498398,
+  "age_mean": 63.78434484875223,
+  "icu_base": "<PROJECT_DIR>/data/external/eicu/icu_base.parquet"
+}

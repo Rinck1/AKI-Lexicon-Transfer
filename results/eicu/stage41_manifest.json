@@ -1,0 +1,32 @@
+{
+  "stage": "41_eicu_extract_measurements",
+  "n_labs": 5723440,
+  "n_urine": 2538188,
+  "n_vitals": 411372157,
+  "n_vitals_physio": 404285182,
+  "n_gcs": 7086975,
+  "lab_vars": [
+    "bicarbonate",
+    "bun",
+    "creatinine",
+    "hemoglobin",
+    "lactate",
+    "ph",
+    "platelet",
+    "potassium",
+    "sodium",
+    "wbc"
+  ],
+  "vital_vars": [
+    "dbp",
+    "gcs_eye",
+    "gcs_motor",
+    "gcs_total",
+    "gcs_verbal",
+    "heart_rate",
+    "mbp",
+    "respiratory_rate",
+    "sbp",
+    "spo2"
+  ]
+}

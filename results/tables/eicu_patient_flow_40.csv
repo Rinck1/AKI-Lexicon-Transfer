@@ -1,0 +1,7 @@
+step,n_stays,n_subjects,note
+00_raw_unit_stays,200859,139367,all eICU unit stays
+01_known_hospital_discharge_status,199108,138265,Alive or Expired
+02_age_ge_18,198490,137773,AGE >= 18
+03_icu_los_ge_min,131412,103463,ICU_LOS_HOURS >= 24
+04_first_unit_visit_per_hadm,109218,95012,unitvisitnumber == 1
+05_exclude_esrd_dialysis,104266,91627,drop apache dialysis or HD/PD/transplant history (dropped 4952)
